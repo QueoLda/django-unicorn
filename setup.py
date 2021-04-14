@@ -12,7 +12,6 @@ setup(
     homepage="https://www.django-unicorn.com",
     keywords=["django", "python", "javascript", "fullstack"],
     install_requires=[
-        "python>=3.6",
         "django>=2.2",
         "beautifulsoup4>=4.8.0",
         "orjson==3.2.1",
