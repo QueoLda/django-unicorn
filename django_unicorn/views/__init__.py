@@ -190,7 +190,7 @@ def _process_component_request(
                             partial_found = True
                             break
 
-                if not partial_found and not only_key:
+                if not only_key:
                     for element in soup.find_all():
                         if "id" in element.attrs and element.attrs["id"] == target:
                             partial_doms.append({"id": target, "dom": str(element)})
