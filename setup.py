@@ -1,22 +1,4 @@
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
-
-# This is a temporary solution for the fact that `pip install -e`
-# fails when there is not a `setup.py`.
-
-import json
-from configparser import ConfigParser
 from distutils.core import setup
+from setuptools import find_packages
 
-
-def project_info():
-    config = ConfigParser()
-    config.read("pyproject.toml")
-    project = config["tool.poetry"]
-    return {
-        "name": json.loads(project["name"]),
-        "version": json.loads(project["version"]),
-    }
-
-
-setup(**project_info())
+setup(name="django-unicorn", version="0.26.0")
