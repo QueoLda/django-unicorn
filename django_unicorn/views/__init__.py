@@ -178,22 +178,24 @@ def _process_component_request(
 
             assert target, "Partial target is required"
 
-            if not only_id:
-                for element in soup.find_all():
-                    if (
-                        "unicorn:key" in element.attrs
-                        and element.attrs["unicorn:key"] == target
-                    ):
-                        partial_doms.append({"key": target, "dom": str(element)})
-                        partial_found = True
-                        break
+            targets = target.split(" ")
+            for target in targets:
+                if not only_id:
+                    for element in soup.find_all():
+                        if (
+                            "unicorn:key" in element.attrs
+                            and element.attrs["unicorn:key"] == target
+                        ):
+                            partial_doms.append({"key": target, "dom": str(element)})
+                            partial_found = True
+                            break
 
-            if not partial_found and not only_key:
-                for element in soup.find_all():
-                    if "id" in element.attrs and element.attrs["id"] == target:
-                        partial_doms.append({"id": target, "dom": str(element)})
-                        partial_found = True
-                        break
+                if not partial_found and not only_key:
+                    for element in soup.find_all():
+                        if "id" in element.attrs and element.attrs["id"] == target:
+                            partial_doms.append({"id": target, "dom": str(element)})
+                            partial_found = True
+                            break
 
     res = {
         "id": component_request.id,
