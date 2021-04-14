@@ -11,13 +11,4 @@ setup(
     repository="https://github.com/adamghill/django-unicorn/",
     homepage="https://www.django-unicorn.com",
     keywords=["django", "python", "javascript", "fullstack"],
-    install_requires=[
-        "django>=2.2",
-        "beautifulsoup4>=4.8.0",
-        "orjson==3.5.1",
-        "shortuuid==1.0.1",
-        "cachetools==4.2.1",
-        "dataclasses==0.6.0",
-        "decorator==4.4.2",
-    ],
 )
