@@ -17,7 +17,7 @@ setup(
         "orjson==3.2.1",
         "shortuuid==1.0.1",
         "cachetools==4.1.1",
-        "dataclasses==0.8.0",
+        "dataclasses==0.6.0",
         "decorator==4.4.2",
     ],
 )
