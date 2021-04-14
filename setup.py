@@ -16,7 +16,7 @@ setup(
         "beautifulsoup4>=4.8.0",
         "orjson==3.5.1",
         "shortuuid==1.0.1",
-        "cachetools==4.1.1",
+        "cachetools==4.2.1",
         "dataclasses==0.6.0",
         "decorator==4.4.2",
     ],
