@@ -14,7 +14,7 @@ setup(
     install_requires=[
         "django>=2.2",
         "beautifulsoup4>=4.8.0",
-        "orjson==3.2.1",
+        "orjson==3.5.1",
         "shortuuid==1.0.1",
         "cachetools==4.1.1",
         "dataclasses==0.6.0",
